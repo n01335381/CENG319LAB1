@@ -17,12 +17,6 @@ public class TopFrag extends ListFragment {
                 "VRActivity"
         };
 
-    //
-    String[] definition = new String[]
-            {       "dab",
-                    "on them"
-            };
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     View view =inflater.inflate(R.layout.top_frag, container, false);
@@ -37,9 +31,7 @@ public class TopFrag extends ListFragment {
     }
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        BottomFrag fragment = (BottomFrag)getFragmentManager().findFragmentById(R.id.bot_frag);
-        fragment.display(definition[position]);
-        getListView().setSelector(android.R.color.holo_blue_dark);
+
     }
 
 }

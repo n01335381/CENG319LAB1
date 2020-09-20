@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">stevenvuCENG319Lab1_Ex1</string>
     <string name="lifecycletitle">Life Cycle Methods Demonstration</string>
+    <string name="start">onStart executed</string>
+    <string name="create">onCreate executed</string>
+    <string name="pause">onPause executed</string>
+    <string name="resume">onResume executed</string>
+    <string name="stop">onStop executed</string>
+    <string name="destroy">onDestroy executed</string>
+    <string name="tag">LIFECYCLE EVENT</string>
+
+
 </resources>

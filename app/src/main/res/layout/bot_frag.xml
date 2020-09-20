@@ -7,11 +7,11 @@
     >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#0737C6"
-        android:textSize="30px"
-        android:id="@+id/definition"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#0530AE"
+        android:textSize="30dp"
+        android:id="@+id/lowertextview"/>
 
 </LinearLayout>
