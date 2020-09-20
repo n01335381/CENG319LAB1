@@ -9,5 +9,4 @@
     <string name="destroy">onDestroy executed</string>
     <string name="tag">LIFECYCLE EVENT</string>
 
-
 </resources>

@@ -1,5 +1,6 @@
 package com.example.stevenvuceng319lab1_ex1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,25 @@ public class TopFrag extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
 
+        super.onListItemClick(l, v, position,id);
+
+        Intent choice;
+        switch(position){
+
+            case 0:
+                choice = new Intent(getActivity(),AIActivity.class);
+                startActivity(choice);
+                break;
+
+            case 1:
+                choice = new Intent(getActivity(),VRActivity.class);
+                startActivity(choice);
+                break;
+
+            default:
+                break;
+
+        }
     }
 
 }
