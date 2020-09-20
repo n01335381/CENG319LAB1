@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.fragment.app.ListFragment;
 
@@ -15,6 +16,12 @@ public class TopFrag extends ListFragment {
                 "AIActivity",
                 "VRActivity"
         };
+
+    //
+    String[] definition = new String[]
+            {       "dab",
+                    "on them"
+            };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -27,6 +34,12 @@ public class TopFrag extends ListFragment {
     setListAdapter(adapter); //binding list view to the array adapter
 
     return view;
+    }
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        BottomFrag fragment = (BottomFrag)getFragmentManager().findFragmentById(R.id.bot_frag);
+        fragment.display(definition[position]);
+        getListView().setSelector(android.R.color.holo_blue_dark);
     }
 
 }

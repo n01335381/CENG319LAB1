@@ -17,14 +17,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <fragment android:name="com.example.stevenvuceng319lab1_ex1.TopFrag"
-        android:id="@+id/topfrag"
-        android:layout_weight="0.6"
+        android:id="@+id/top_frag"
+        android:layout_weight="0.5"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <fragment android:name="com.example.stevenvuceng319lab1_ex1.TopFrag"
-        android:id="@+id/botfrag"
-        android:layout_weight="0.4"
+    <fragment android:name="com.example.stevenvuceng319lab1_ex1.BottomFrag"
+        android:id="@+id/bot_frag"
+        android:layout_weight="0.5"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
