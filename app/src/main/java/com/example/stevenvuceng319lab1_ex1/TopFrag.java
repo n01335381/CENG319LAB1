@@ -10,13 +10,13 @@ import android.widget.ListView;
 
 import androidx.fragment.app.ListFragment;
 
-public class TopFrag extends ListFragment {
+public class TopFrag extends ListFragment { //list fragment, not fragment for this case
 
-    String[] activities = new String[]
+    String[] activities = new String[] //how to make a new string array
         {
-                "AIActivity",
-                "VRActivity"
-        };
+                "AIActivity", //hardcoded?
+                "VRActivity" //have not yet learned how to use xml variables for arrays
+        }; //listview instead of buttons. onclicklistener built below for interaction
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -24,28 +24,28 @@ public class TopFrag extends ListFragment {
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
             android.R.layout.simple_list_item_1,activities);
-        //ArrayAdapter calls toString() on each array item and places in a TextView
-        //this creates a view for each array item
+        //ArrayAdapter calls toString() on each array item and places them in a separate TextView
+        //this creates a view/display for each array item
     setListAdapter(adapter); //binding list view to the array adapter
 
     return view;
     }
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
+    public void onListItemClick(ListView l, View v, int position, long id) { //action listener, for list item?
 
         super.onListItemClick(l, v, position,id);
 
-        Intent choice;
-        switch(position){
+        Intent choice; //declaring intent, to later launch an activity
+        switch(position){ //position of selection in array?
 
             case 0:
-                choice = new Intent(getActivity(),AIActivity.class);
-                startActivity(choice);
+                choice = new Intent(getActivity(),AIActivity.class);//creating intent for ai or vr activity
+                startActivity(choice);// launching it
                 break;
 
             case 1:
-                choice = new Intent(getActivity(),VRActivity.class);
-                startActivity(choice);
+                choice = new Intent(getActivity(),VRActivity.class); //same as above
+                startActivity(choice);//ditto
                 break;
 
             default:

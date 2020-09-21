@@ -5,21 +5,21 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-public class AIActivity extends AppCompatActivity{
+public class AIActivity extends AppCompatActivity{ //AppCompatActivity needed?
 
     TextView current_ai_lifecycle;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //onCreate is for full scale activities( not fragments, of which onCreateView is needed)
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aiactivity);
-        current_ai_lifecycle= (TextView)findViewById(R.id.aitextview);
-        current_ai_lifecycle.setText(getString(R.string.create));
+        setContentView(R.layout.aiactivity); //to create/ display the view
+        current_ai_lifecycle= (TextView)findViewById(R.id.aitextview); //for full scale activites, we dont need view.findViewById. just findview
+        current_ai_lifecycle.setText(getString(R.string.create));//string variable, not hardcoded
     }
 
     public void onStart() {
         super.onStart();
-        Log.d((getString(R.string.tag)), getString(R.string.start));
+        Log.d((getString(R.string.tag)), getString(R.string.start)); //log.d( tag, message) so tag is needed
         current_ai_lifecycle.setText(getString(R.string.start));
     }
     public void onPause()

@@ -7,19 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class BottomFrag extends Fragment {
+public class BottomFrag extends Fragment {  //note of extends fragment
 
     TextView current_lifecycle;
 
     @Override
 
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
-        //
-        View view = inflater.inflate(R.layout.bot_frag, container, false);
-        Log.d((getString(R.string.tag)), getString(R.string.create));
-        current_lifecycle= (TextView)view.findViewById(R.id.lowertextview);
-        current_lifecycle.setText(getString(R.string.create));
+        //onCreateView needed for fragments + inflater,viewgroup etc.
+        View view = inflater.inflate(R.layout.bot_frag, container, false); //establishing a view?
+        Log.d((getString(R.string.tag)), getString(R.string.create));//string variable, not hardcoded
+        current_lifecycle= (TextView)view.findViewById(R.id.lowertextview); //view.findViewByID needed for frags, not just findViewById
+        current_lifecycle.setText(getString(R.string.create));//to make a list, do .append and add a +"/n" to all similiar lines
+        Toast.makeText(getActivity(), getString(R.string.create), Toast.LENGTH_SHORT).show();
         return view;
 
     }
@@ -28,6 +30,7 @@ public class BottomFrag extends Fragment {
         super.onStart();
         Log.d((getString(R.string.tag)), getString(R.string.start));
         current_lifecycle.setText(getString(R.string.start));
+        Toast.makeText(getActivity(), getString(R.string.start), Toast.LENGTH_SHORT).show();
     }
     public void onPause()
     {

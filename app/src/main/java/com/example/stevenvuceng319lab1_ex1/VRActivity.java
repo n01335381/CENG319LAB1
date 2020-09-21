@@ -6,7 +6,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class VRActivity extends AppCompatActivity{
-
+//***********ALL RELEVANT COMMENTS ARE ON AIACTIVITYCLASS ****************
     TextView current_vr_lifecycle;
 
     @Override

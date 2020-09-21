@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textColor="#0530AE"
-        android:textSize="30dp"
-        android:id="@+id/lowertextview"/>
+        android:textSize="30sp"
+        android:id="@+id/lowertextview" /> <!-- sp/scale dependant pixels is like dp, but accounts for screen size and accessibility settings-->
 
 </LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">stevenvuCENG319Lab1_Ex1</string>
+    <string name="lifecycletitle">Démonstration des méthodes du cycle de vie</string>
+    <string name="create">onCreate exécuté</string>
+    <string name="start">onStart exécuté</string>
+    <string name="resume">onResume exécuté</string>
+    <string name="pause">onPause exécuté"</string>
+    <string name="destroy">onDestroy exécuté</string>
+    <string name="stop">onStop exécuté"</string>
+    <string name="tag">EVÉNEMENT DE CYCLE DE VIE"</string>
+
+</resources>
